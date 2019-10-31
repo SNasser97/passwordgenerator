@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<form class="form">
+			<h1 class="header">Password Generator</h1>
+			<div class="form__box form__box--1">
+				<label for="password">Your new password:</label>
+				<input type="text" name="password" class="form__pwfield" id="password" placeholder="Generate a new password " readonly>
+				<div class="btn btn-copy">
+					<svg class="form__icon form__icon--click">
+					  <use xlink:href="img/sprites.svg#icon-copy"/>
+					</svg>
+				</div>
+				<div class="btn btn-generate">
+					<svg class="form__icon form__icon--spin">
+					  <use xlink:href="img/sprites.svg#icon-cycle"/>
+					</svg>
+				</div>
+				<p class="form__warning"><strong></strong></p>
+			</div>
+			<div class="form__box form__box--2">
+				<label for="length">Password length:</label>
+				<input type="text" name="pwlength" class="form__pwlength" id="length" value="6">
+				
+				<input id="hasNumber" type="checkbox" name="hasNum" class="form__checkbox">
+				<label for="hasNumber">include numbers
+					<span class="form__checkbox-style"></span>
+				</label>
+
+				<input id="hasSymbol" type="checkbox" name="hasSymbol" class="form__checkbox">
+				<label for="hasSymbol">include symbols
+					<span class="form__checkbox-style"></span>
+				</label>
+				
+				<input id="hasUppercase" type="checkbox" name="hasUppercase" class="form__checkbox">
+				<label for="hasUppercase">include uppercase
+					<span class="form__checkbox-style"></span>
+				</label>
+				
+				<input id="hasLowercase" type="checkbox" name="hasLowercase" class="form__checkbox">
+				<label for="hasLowercase">include lowercase
+					<span class="form__checkbox-style"></span>
+				</label>
+			</div>
+		</form>
+	</div>
+</body>
+<script src="js/pwgenerator.js"></script>
+<!-- <script src="js/pwgenerator-refactor.js"></script> -->
+</html>

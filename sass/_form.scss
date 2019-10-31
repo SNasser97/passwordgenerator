@@ -1,0 +1,293 @@
+
+.container {
+	padding: 4rem;
+	// margin: 4rem auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	@media only screen and (max-width: $bp-med) {
+			// background: orangered;
+			width: 100%;
+
+	}
+	
+}
+
+.form {
+	background-image: linear-gradient(to bottom right,
+		$col-primary,
+		$col-primary-dark);
+	border-radius: 5px;
+	height: auto;
+	width: 55.5rem;
+	display: flex;
+	justify-content: center;
+	padding: inherit;
+	flex-wrap: wrap;
+	align-content: center;
+			box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	animation: moveUp 1s;
+	
+	@media only screen and (max-width: $bp-med) {
+			width: 48rem;
+	}
+	@media only screen and (max-width: $bp-small) {
+			// width: 45rem;
+			width: 39rem;
+			padding:2rem;
+	}
+	label {
+		font-size: 2rem;
+		text-transform: capitalize;
+		align-self: center;
+
+		
+	}
+	
+	&__box {
+		// border-radius: inherit;
+		// width: 100%;
+		// padding: 2rem;
+		// display: flex;
+		// flex-wrap: wrap;
+		align-content: center;
+
+		&:not(:last-child) {
+			margin: 5rem 0;
+		}
+		width: 100%;
+			border:1px solid $col-primary-dark;
+			height: 10rem ;
+			box-shadow: 0 1px 4px rgba(0,0,0,.2);
+
+		&--1 {
+			height:15rem;
+			border-radius: inherit;
+			padding: 2rem;
+			display: flex;
+			flex-wrap: wrap;
+			  label { // label "Your new password:"
+				text-align: center;
+				margin: .5rem auto;
+			  }
+		}
+	
+		&--2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// padding: 5rem;
+			flex-direction: column;
+			// height: auto;
+			flex-wrap: wrap;
+			align-content: center;
+			position: relative;
+			@media only screen and (max-width: $bp-med) {
+				width:100%;
+			}
+			@media only screen and (max-width: $bp-small) {
+				width: 41rem;
+				margin: -2rem;
+				border:1px solid rgba(0,0,0,.05);
+				box-shadow:none;
+			}
+			label {
+				margin-left: 2rem;
+				font-size: 1.8rem;
+				width: 11rem;
+				font-weight: bolder;
+				position: relative;
+				@media only screen and (max-width: $bp-med) {
+					margin-left: 1.3rem;
+					font-size: 1.8rem;
+					width: 11rem;
+				}
+				&[for="hasNumber"], 
+				&[for="hasSymbol"],
+				&[for="length"] {
+					@media only screen and (max-width: $bp-med) {
+						margin-left: 0rem;
+					}
+				}
+				&[for="hasUppercase"],
+				&[for="hasLowercase"] {
+					@media only screen and (max-width: $bp-small) {
+						// width:100%;
+						margin-left: 0;
+					}
+				}
+			}
+
+		}
+	}
+
+	&__warning {
+		color:#d80000; 
+		vertical-align: middle;
+		line-height: 3;
+		width: 100%;
+		text-align: center;
+		height: 1rem;
+	}
+
+	&__pwfield {
+		width: 60%;
+		margin-left: auto;
+		font-size: 3.5rem;
+		font-family: inherit;
+		// font-weight: bolder;
+		background-color: rgba(0,0,0, 0.5);
+		border:1px solid rgba($col-primary-dark, 1);
+		border-radius: 2px;
+		color: #EFEFEF;
+		padding: .5rem;
+		font-family: "Consolas", monospace, sans-serif;
+			text-align: center;
+		
+		@media only screen and (max-width: $bp-med) {
+			font-size: 3rem;
+		}
+		@media only screen and (max-width: $bp-small) {
+			font-size: 2.8rem;
+		}
+	}
+	&__pwfield::placeholder {
+		font-size: calc(3.5rem / 2);
+		// padding: .5rem;
+		@media only screen and (max-width: $bp-med) {
+			font-size: calc(3rem / 2);
+			
+		}
+		@media only screen and (max-width: $bp-small) {
+			font-size: calc(2.8rem / 2.3);
+		}
+	}
+
+	
+	
+
+	&__icon {
+		height: 4rem;
+		width: 4rem;
+		fill: rgba(0,0,0,.5);
+		transition: transform .2s ;
+		&--spin {
+			transition: transform .2s;
+		}
+	}
+	
+	&__checkbox,
+	&__pwlength {
+		align-self: center;
+		margin-left: -1.5rem;
+	}
+	&__checkbox {
+		display: none;
+	}
+	&__pwlength {
+		width: 9.5rem;
+		height: 3.5rem;
+		text-align: center;
+		// margin-left: auto;
+		font-size: 2rem;
+		font-family: inherit;
+		font-weight: bolder;
+		background-color: rgba(0,0,0, 0.5);
+		border:1px solid rgba($col-primary-dark, 1);
+		border-radius: 2px;
+		color: #EFEFEF;
+	}
+
+	&__checkbox {
+		display: none; // hide radio input
+	}
+
+	[for="hasNumber"] &__checkbox-style,
+	[for="hasSymbol"] &__checkbox-style{
+			left:7.5rem;
+	}
+
+	&__checkbox-style {
+		height: 3rem;
+		width: 3rem;
+		border-radius: 2px;
+		display: inline-block; //make span to block elem
+		position: absolute;
+		left:9rem;
+		top:.4rem;
+		background-color: rgba(0,0,0,.5);
+		border: 1px solid rgba(0,0,0,.2);
+		transition: all .2s;
+		
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			opacity: 0;
+		    height: 2rem;
+		    width: .8rem;
+		    border: solid $col-primary-light;
+		    border-width: 0 4px 4px 0;
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: translate(-50%, -59%) rotate(45deg);
+		}
+		
+	}
+	//select input checked, change checked on :after;
+	&__checkbox:checked + label &__checkbox-style::after {
+		opacity: 1;
+	}
+	// &__checkbox:checked + label &__checkbox-style {
+	// 	background-color: rgba(0,0,0, 0.5);
+	// }
+	
+	// BTN HOVER AND CLICK EFFECT
+	.btn:hover &__icon {
+		fill:#fff;
+	}
+	
+	.btn:active &__icon {
+		&--click {
+			transform:scale(0.8);
+		}
+	}
+	.btn:active &__icon {
+		&--spin {
+			transform: rotate(-180deg);
+		}
+	}
+}
+
+.btn {
+	padding: .8rem;
+	border-radius: 2px;
+	border:1px solid rgba(0,0,0, .1);
+	background-color: $col-primary-dark;
+	cursor:pointer;
+	transition: border .1s;
+
+}
+.btn:active, 
+.btn:hover{
+	border: 1px solid #fff;
+}
+
+
+// animations
+@keyframes moveUp {
+	0%{
+		opacity: 0;
+		transform: translateY(10rem);
+	}
+	50% {
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+}

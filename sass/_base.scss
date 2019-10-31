@@ -1,0 +1,53 @@
+// font
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+$font: 'Inconsolata', monospace, sans-serif;
+
+// colours
+$col-primary: #45D678;
+$col-primary-light:#4EEE86;
+$col-primary-dark : #3AA460;
+
+// breakpoints (screen device);
+$bp-med: 50em; // 600px
+$bp-small: 28.125em; // 450px;
+
+
+
+
+
+*,
+*::after,
+*::before { /* reset css */
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	// using rem, so 1.6rem = 16px
+	@media only screen and (max-width: $bp-med) {
+		font-size: 56.25%;
+	}
+	@media only screen and (max-width: $bp-small) {
+		font-size: 50%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 1.6rem;
+	font-family: $font;
+	background-image: linear-gradient(to right bottom,
+		rgba($col-primary, .5) 21%,
+		rgba($col-primary-light, .9) 41%
+		);
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+
+////////////////////////////////////////////////////
+//// NOT NEEDED BUT JUST IN CASE
+
+ // PART OF generatePassword()
+ //  if(incNumber.checked === true && incSymbol.checked === true 
+	 //  	&& incUppercase.checked === true && incLowercase.checked === true) {
+	 //  	return password = multiLoop(incNumber,incSymbol, incUppercase, incLowercase,
+		// 							numbers,
+		// 							symbols,
+		// 							characters,
+		// 							characters.toLowerCase());
+	 //  	}
+
+// else if(incNumber.checked === true && incSymbol.checked === true) {
+		// 	return password = duoLoop(incNumber, incSymbol, numbers, symbols);
+	 //  	}
+	 // else if(incNumber.checked === true && incUppercase.checked === true) { 
+	 // 		return password = duoLoop(incNumber, incUppercase, numbers, characters); 
+	 // 	} 
+	 // else if (incNumber.checked === true && incLowercase.checked === true) { 
+	 // 		return password = duoLoop(incNumber, incLowercase, numbers, characters.toLowerCase()); 
+	 // 	} 
+	 // else if (incSymbol.checked === true && incUppercase.checked === true) { 
+	 // 		return password = duoLoop(incSymbol, incUppercase, symbols, characters); 
+	 // 	} 
+	 // else if (incSymbol.checked === true && incLowercase.checked === true) { 
+	 // 		return password = duoLoop(incSymbol, incLowercase, symbols, characters.toLowerCase()); 
+	 // 	}
+	 // else if (incUppercase.checked === true && incLowercase.checked === true) { 
+	 // 		return password = duoLoop(incUppercase, incLowercase, characters, characters.toLowerCase()); 
+	 // 	}
+
+	 // else if(incNumber.checked === true) {
+		// 	return password = charGenerator(incNumber, numbers);
+		// } else if(incSymbol.checked === true) {
+
+		// 	return password = charGenerator(incSymbol, symbols);
+		// } else if(incUppercase.checked === true) {
+
+		// 	return password = charGenerator(incUppercase, characters);
+		// } else if (incLowercase.checked === true) {
+
+		// 	return password = charGenerator(incLowercase, characters.toLowerCase());
+		// } 
+
+
+// test values
+// let str1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// let str2 = "@%+\\/'!#$^?:,(){}[]~_&|<>`=";
+// let str3 = "0123456789";
+// let len = 8;
+// // var rand = str1.split("").slice(Math.floor(Math.random()*str1.length), str1.length).join("").toLowerCase();
+// // console.log(rand);
+
+// // POSSIBLE SOLUTION FOR MULTI-CHAR PASSWORDS
+// var temp="";
+// for(var i =0 ; i<len; i++) {
+// 	temp += str1.charAt(Math.floor(Math.random() * str1.length)) 
+// 		 + str2.charAt(Math.floor(Math.random() * str2.length)) 
+// 		 + str3.charAt(Math.floor(Math.random() * str3.length));
+
+// }
+// var newtemp = temp.slice(0, len);
+// console.log(`password: ${newtemp} \n length: ${newtemp.length}`);
+
+
+// var str = "PASSWORDpassword";
+// var testrandomTitle = str.charAt([Math.floor(Math.random() * str.length)]);
+// console.log("char test", testrandomTitle);
+// var random = str.split("").slice(Math.floor(Math.random()*str.length), str.length).join("").toLowerCase();
+// var random = str.split("")
+// var rand2 = random.slice(str.charAt(Math.floor(Math.random() * str.length)), rand.length);
+
+// console.log("random:", rand2);
+
+
+
+// function multiChoiceChar() {
+// 	// let password = "";
+
+// 	// NUMBER
+// 	// maybe = ((incNum.checked = true && incSym.checked == true) || <-- (other way around))
+// 	if((incNumber.checked == true && incSymbol.checked == true)) return duoLoop(incNumber, incSymbol);
+// 	if(incNumber.checked == true && incUppercase.checked == true) return duoLoop(incNumber, incUppercase); 
+// 	if(incNumber.checked == true && incLowercase.checked == true) return duoLoop(incNumber, incLowercase);
+
+// 	// SYMBOL
+// 	// if(incSymbol.checked == true && incNumber.checked == true) duoLoop(incSymbol, )
+// 	if(incSymbol.checked == true && incUppercase.checked == true) return duoLoop(incSymbol, incUppercase);
+// 	if(incSymbol.checked == true && incLowercase.checked == true) return duoLoop(incSymbol, incLowercase);
+
+// 	// UPPERCASE
+// 	if(incUppercase.checked == true && incLowercase.checked == true) return duoLoop(incUppercase, incLowercase);
+
+// 	// LOWER
+// 	if(incLowercase.checked == true && incUppercase == true) return duoLoop(incLowercase, incUppercase);
+// 	// ALL
+// 	// return password;
+// }
+
+
+// lineBreak("Random string output:");
+// // console.log("Random char: " + characters.split("")[Math.floor(Math.random() * symbols.length)]);
+// // console.log("Random symbol: " + symbols.split("")[Math.floor(Math.random() * symbols.length)]);
+// // console.log("Random numbers: " + numbers.split("")[Math.floor(Math.random() * numbers.length)]);
+
+// lineBreak("Password characters:");
+// // console.log(characters, "\n" + symbols + "\n" + numbers);
+
+
+
+// function test() {
+// 	// test output to field
+// 	let a = str1.split("")[Math.floor(Math.random() * str1.length)];
+// 	let b = str2.split("")[Math.floor(Math.random() * str2.length)];
+// 	let c = str3.split("")[Math.floor(Math.random() * str3.length)];
+// 	return a + b + c;
+// }
+
+
+
+// lineBreak("DOM Output test:");
+// // Check if DOM element exists
+// function printDOM(...elem) {
+// 	for(let i =0; i<elem.length; i++) {
+// 		var idOrClass = 
+// 		(elem[i].getAttribute("class") !== null && elem[i].getAttribute("id") === null) ? 
+// 		elem[i].getAttribute("class") : elem[i].getAttribute("id");
+// 		console.log(`Element ${idOrClass} exists`, elem[i]);
+// 	}
+// }
+// printDOM(passwordField, copyBtn, generateBtn, passwordLength, hasNumber, 
+// 	hasUppercase,
+// 	hasLowercase);
+
+
