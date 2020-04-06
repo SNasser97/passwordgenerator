@@ -15,7 +15,7 @@
   "author": "Nasser",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.5",
     "concat": "^1.0.3",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
